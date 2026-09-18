@@ -93,4 +93,15 @@ app.listen(PORT, () => {
 });
 
 module.exports = app;
+gh repo clone Rufio244/ScanClick_Platform
+cd ScanClick_Platform
 
+mkdir -p .github/workflows .github/automation docs
+.github/workflows/repository-health.yml
+.github/automation/repository-health.js
+docs/REPOSITORY_HEALTH_GUARDIAN.md
+git add .github docs
+git commit -m "Add isolated repository health automation"
+git push origin main
+gh auth logout
+gh auth login
